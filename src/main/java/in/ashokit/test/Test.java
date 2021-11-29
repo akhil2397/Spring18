@@ -10,7 +10,7 @@ public class Test {
 	public static void main(String args[])
 	{
 		ApplicationContext context = new ClassPathXmlApplicationContext("Beans.xml");
-		// after above line only our object will be created(only for singleton scope) no need to mention below lines also as we defined constructor in class we can see that here
+		//after above line only our object will be created(only for singleton scope) no need to mention below lines also as we defined constructor in class we can see that here
 		// to get different object for every getBean call define scope as prototype in Xml file
 		TokenGenerator t1 = context.getBean(TokenGenerator.class);
 		System.out.println(t1.hashCode());
